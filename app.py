@@ -277,7 +277,7 @@ periodicity_mapping = {
 }
 
 if SessionKeys.CHOSEN_CALCULATION not in st.session_state:
-    st.session_state[SessionKeys.CHOSEN_CALCULATION] = CalculationType.STANDARD_PAYMENT
+    st.session_state[SessionKeys.CHOSEN_CALCULATION] = CalculationType.DETAILED_PAYMENT
 
 
 chosen_calculation = st.sidebar.selectbox(
