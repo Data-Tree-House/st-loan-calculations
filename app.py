@@ -1,9 +1,17 @@
+import os
 from enum import StrEnum
 from typing import Literal
 
 import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
+import streamlit.components.v1 as components
+
+if (website_id := os.getenv("UMAMI_WEBSITE_ID")) is not None:
+    components.html(
+        f'<script async defer src="https://umami.datatreehouse.org/script.js" '  #
+        f'data-website-id="{website_id}"></script>'
+    )
 
 st.set_page_config(
     page_title="Bond Calculator",
